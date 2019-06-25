@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "8-bit";
+  src: url(font/8-BITWONDER.TTF);
+}
+#game-board {
+  margin: 0 auto;
+  display: block;
+  background-color: beige;
+}
+#title-screen {
+  height: 600px;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+#title-screen .btn {
+}
+#title-screen {
+  font-family: "8-bit";
+}
