@@ -9,16 +9,14 @@
       integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
       crossorigin="anonymous"
     ></script>
-    <!-- <link
-      href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap"
-      rel="stylesheet"
-    /> -->
+
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
     <title>6-Bit Shooter</title>
   </head>
   <body>
     <div id="title-screen">
+      <h1 id="winner"></h1>
       <h1>6-BIT SHOOTER</h1>
       <diV id="start" class="btn-div">
         <a class="start-btn eightbit-btn" data-players="1" href="#">1 Player</a>
@@ -26,19 +24,45 @@
           >2 Players</a
         >
       </diV>
-      <div id="retry" class="btn-div" style="display: none">
-        <a class="restart-btn eightbit-btn" href="#">Retry</a>
-        <a class="reaload-btn eightbit-btn" href="#">Main Menu</a>
+      <div id="end-div" class="btn-div" style="display: none">
+        <a class="eightbit-btn" id="retry-btn" href="#">Retry</a>
+        <a class="eightbit-btn main-menu-btn" href="#">Main Menu</a>
       </div>
-      <div class="btn-div">
+      <div id="how-to-btn-div" class="btn-div">
         <a class="reaload-btn eightbit-btn" id="how-to-play-btn" href="#"
           >How to play</a
         >
       </div>
     </div>
-    <div id="how-to-play-div" style="display: none">
-      <h1>How to play:</h1>
-      <p>Player1 controls:</p>
+    <div id="how-to-play-content-div" style="display: none">
+      <a class="eightbit-btn main-menu-btn" href="#">Main Menu</a>
+      <h2>How to play:</h2>
+      <div class="controls">
+        <div class="controls-p1">
+          <h2>Player1:</h2>
+          <div>
+            <img src="images/player1-change-direction.png" />
+            <p>Change</p>
+            <p>direction</p>
+          </div>
+          <div>
+            <img src="images/player1-shoot.png" />
+            <p>Shoot</p>
+          </div>
+        </div>
+        <div class="controls-p2">
+          <h2>Player2:</h2>
+          <div>
+            <img src="images/player2-change-direction.png" />
+            <p>Change</p>
+            <p>direction</p>
+          </div>
+          <div>
+            <img src="images/player2-shoot.png" />
+            <p>Shoot</p>
+          </div>
+        </div>
+      </div>
     </div>
     <canvas width="1000" height="600" id="game-board"></canvas>
   </body>

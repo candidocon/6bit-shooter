@@ -2,6 +2,11 @@
   font-family: "8-bit";
   src: url(font/8-BITWONDER.TTF);
 }
+body {
+  display: flex;
+  justify-content: center;
+  font-family: "8-bit";
+}
 #game-board {
   margin: 0 auto;
   display: block;
@@ -11,14 +16,18 @@
   background-position: 50% 0;
 }
 #title-screen,
-#how-to-play-div {
-  height: 600px;
-  width: 100%;
+#how-to-play-content-div {
+  margin-top: 64px;
+  height: 537px;
+  width: 1000px;
   position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column;
+  background-image: url(images/desert-bg.png);
+  background-repeat: repeat;
+  background-position: 50% 0;
 }
 
 #title-screen {
@@ -68,4 +77,23 @@
 .eightbit-btn:focus {
   background: #ce372b;
   box-shadow: inset -6px -6px 0px 0px #8c2022;
+}
+
+.controls {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.controls div {
+  text-align: center;
+  margin: 0 35px;
+  float: left;
+}
+.controls-p1 h2 {
+  /* float: left; */
+  color: #ff0000;
+}
+.controls-p2 h2 {
+  /* float: right; */
+  color: #19bbc4;
 }

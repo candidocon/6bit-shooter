@@ -10,7 +10,14 @@ window.onload = function() {
   });
   $("#how-to-play-btn").click(function() {
     $("#title-screen").hide();
-    $("#how-to-play-div").show();
+    $("#how-to-play-content-div").show();
+  });
+  $("#retry-btn").click(function() {
+    $("#title-screen").hide();
+    restartGame();
+  });
+  $(".main-menu-btn").click(function() {
+    location.reload();
   });
   document.onkeydown = function(e) {
     if (e.keyCode === 65 /*a*/) {
@@ -258,12 +265,8 @@ function detectCollisions() {
       if (player1.lives === 0) {
         player2.wins++;
         setTimeout(() => {
-          alert("Player 2 wins");
-          $("#title-screen").show();
-          $("#retry").show();
-          $("#start").hide();
-          // location.reload();
-          restartGame();
+          endGame("Player 2");
+          // alert("Player 2 wins");
         }, 50);
       }
     }
@@ -279,20 +282,24 @@ function detectCollisions() {
       if (player2.lives === 0) {
         player1.wins++;
         setTimeout(() => {
-          alert("Player 1 wins");
-          // location.reload();
-          restartGame();
+          // alert("Player 1 wins");
+          endGame("Player 1");
         }, 50);
       }
     }
   });
 }
+let frames = 1;
+
 function animate() {
-  setInterval(() => {
-    ctx.clearRect(0, 0, 1200, 600);
-    drawEverything();
-    detectCollisions();
-  }, 16);
+  frames++;
+
+  // setInterval(() => {
+  ctx.clearRect(0, 0, 1200, 600);
+  drawEverything();
+  detectCollisions();
+  // }, 16);
+  requestAnimationFrame(animate);
 }
 
 function startGame(players) {
@@ -325,6 +332,19 @@ function restartGame() {
       player2.difficulty = 1 + player1.wins;
     }
   }
+  player1.canShoot = true;
+  player2.canShoot = true;
   player1.bullets = 6;
   player2.bullets = 6;
+}
+
+function endGame(winner) {
+  allTheProjectiles = [];
+  player1.canShoot = false;
+  player2.canShoot = false;
+  $("#winner").html(`${winner} Wins`);
+  $("#title-screen").show();
+  $("#end-div").show();
+  $("#how-to-btn-div").hide();
+  $("#start").hide();
 }
