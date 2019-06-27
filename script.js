@@ -265,7 +265,7 @@ function detectCollisions() {
       if (player1.lives === 0) {
         player2.wins++;
         setTimeout(() => {
-          endGame("Player 2");
+          endGame(2);
           // alert("Player 2 wins");
         }, 50);
       }
@@ -283,7 +283,7 @@ function detectCollisions() {
         player1.wins++;
         setTimeout(() => {
           // alert("Player 1 wins");
-          endGame("Player 1");
+          endGame(1);
         }, 50);
       }
     }
@@ -342,7 +342,11 @@ function endGame(winner) {
   allTheProjectiles = [];
   player1.canShoot = false;
   player2.canShoot = false;
-  $("#winner").html(`${winner} Wins`);
+  if (winner === 1) {
+    $("#winner").html(`<span style="color: #FF0000">Red Player Wins</span>`);
+  }else{
+    $("#winner").html(`<span style="color: #19bbc4">Blue Player Wins</span>`);
+  }
   $("#title-screen").show();
   $("#end-div").show();
   $("#how-to-btn-div").hide();

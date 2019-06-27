@@ -6,6 +6,9 @@ body {
   display: flex;
   justify-content: center;
   font-family: "8-bit";
+  background-image: url(images/desert-bg.png);
+  background-repeat: repeat;
+  background-position: 50% 0;
 }
 #game-board {
   margin: 0 auto;
@@ -14,6 +17,7 @@ body {
   background-image: url(images/desert-bg.png);
   background-repeat: repeat;
   background-position: 50% 0;
+  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #title-screen,
 #how-to-play-content-div {
