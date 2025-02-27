@@ -1,8 +1,8 @@
-🎯 6Bit Shooter 🤠🎮
+# 🎯 6Bit Shooter 🤠🎮
 
 6Bit Shooter is a western-themed pixel shooter game developed using HTML, CSS, and JavaScript. Players engage in fast-paced duels, testing their reflexes in a retro pixel-art environment. Some of the artwork in the game is originally crafted to enhance the unique western atmosphere. 🎨🖌️
 
-🌟 Features
+## 🌟 Features
 
 🎨 Pixel Art Graphics – Immerse yourself in a classic western setting with detailed original pixel art visuals.
 
@@ -10,7 +10,7 @@
 
 🌐 Browser-Based – No installation required! Play directly in your web browser.
 
-🚀 Getting Started
+## 🚀 Getting Started
 
 To play 6Bit Shooter locally:
 
@@ -24,7 +24,7 @@ cd 6bit-shooter
 
 3️⃣ Open index.html in Your Preferred Web Browser and start shooting! 🔫💥
 
-🎮 Controls
+## 🎮 Controls
 
 👣 Move → Use the arrow keys to navigate your character.
 
@@ -32,7 +32,7 @@ cd 6bit-shooter
 
 ♻️ Reload → Automatically reloads after six shots, just like a real six-shooter revolver!
 
-🤝 Contributing
+## 🤝 Contributing
 
 Contributions are welcome! If you’d like to improve the game:
 
@@ -50,7 +50,7 @@ git push origin feature-name
 
 5️⃣ Open a pull request detailing your changes.
 
-📜 License
+## 📜 License
 
 📝 This project is licensed under the MIT License.
 
