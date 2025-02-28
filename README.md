@@ -2,6 +2,9 @@
 
 6Bit Shooter is a western-themed pixel shooter game developed using HTML, CSS, and JavaScript. Players engage in fast-paced duels, testing their reflexes in a retro pixel-art environment. Some of the artwork in the game is originally crafted to enhance the unique western atmosphere. 🎨🖌️
 
+## 🕹️ Live Demo
+Check out the live version: [6Bit-Shooter](https://candidocon.github.io/6bit-shooter/)
+
 ## 🌟 Features
 
 🎨 Pixel Art Graphics – Immerse yourself in a classic western setting with detailed original pixel art visuals.
